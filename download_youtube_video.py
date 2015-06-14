@@ -7,16 +7,11 @@ import subprocess
 import sys
 
 
-#Overall info goes here.
-___overview___ = {
-    'title': "Download Youtube video",
-}
-
 #Script Info goes here.
 __info__ = {
     'title': "Download Youtube video",
     'description': "Download Youtube video",
-    'url': "https://github.com/TonkWorks/pepper-autocomplete-atom-package",
+    'url': "https://github.com/TonkWorks/download_a_youtube_video/archive/master.zip",
     'author': "Kevin Dagostino",
     'input': [
     {
@@ -37,14 +32,14 @@ def script():
 
     print("ARGS:")
     print(args)
-    #return str(args)
 
     video_format = "mp4"
     root_path = os.path.dirname(os.path.realpath(__file__))
-    youtube_dl_exe_path = os.path.join(root_path, "youtube-dl.exe") #Windows only
 
     command = ''
     if sys.platform == 'win32':
+        #Windows only
+        youtube_dl_exe_path = os.path.join(root_path, "youtube-dl.exe")
         command = "\"" + youtube_dl_exe_path + "\" {0} -f {1}".format(args.youtube_url, video_format)
     else:
         raise("Not implmented for max/linux yet")
