@@ -11,7 +11,7 @@ import sys
 __info__ = {
     'title': "Download Youtube video",
     'description': "Download Youtube video",
-    'url': "https://github.com/TonkWorks/download_a_youtube_video/archive/master.zip",
+    'url': "http://github.com/TonkWorks/download_a_youtube_video/archive/master.zip",
     'author': "Kevin Dagostino",
     'input': [
     {
